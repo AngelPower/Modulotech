@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DB395098299F5E670000E12D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB395097299F5E670000E12D /* AppDelegate.swift */; };
+		DB39509A299F5E670000E12D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB395099299F5E670000E12D /* SceneDelegate.swift */; };
+		DB39509C299F5E670000E12D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB39509B299F5E670000E12D /* ViewController.swift */; };
+		DB39509F299F5E670000E12D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB39509D299F5E670000E12D /* Main.storyboard */; };
+		DB3950A1299F5E680000E12D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB3950A0299F5E680000E12D /* Assets.xcassets */; };
+		DB3950A4299F5E680000E12D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB3950A2299F5E680000E12D /* LaunchScreen.storyboard */; };
+		DB3950AF299F5E680000E12D /* ModulotechTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3950AE299F5E680000E12D /* ModulotechTests.swift */; };
+		DB3950B9299F5E680000E12D /* ModulotechUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3950B8299F5E680000E12D /* ModulotechUITests.swift */; };
+		DB3950BB299F5E680000E12D /* ModulotechUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3950BA299F5E680000E12D /* ModulotechUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DB3950AB299F5E680000E12D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB39508C299F5E670000E12D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB395093299F5E670000E12D;
+			remoteInfo = Modulotech;
+		};
+		DB3950B5299F5E680000E12D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB39508C299F5E670000E12D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB395093299F5E670000E12D;
+			remoteInfo = Modulotech;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DB395094299F5E670000E12D /* Modulotech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Modulotech.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB395097299F5E670000E12D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DB395099299F5E670000E12D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DB39509B299F5E670000E12D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DB39509E299F5E670000E12D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DB3950A0299F5E680000E12D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DB3950A3299F5E680000E12D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DB3950A5299F5E680000E12D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB3950AA299F5E680000E12D /* ModulotechTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModulotechTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB3950AE299F5E680000E12D /* ModulotechTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulotechTests.swift; sourceTree = "<group>"; };
+		DB3950B4299F5E680000E12D /* ModulotechUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModulotechUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB3950B8299F5E680000E12D /* ModulotechUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulotechUITests.swift; sourceTree = "<group>"; };
+		DB3950BA299F5E680000E12D /* ModulotechUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulotechUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DB395091299F5E670000E12D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB3950A7299F5E680000E12D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB3950B1299F5E680000E12D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB39508B299F5E670000E12D = {
+			isa = PBXGroup;
+			children = (
+				DB395096299F5E670000E12D /* Modulotech */,
+				DB3950AD299F5E680000E12D /* ModulotechTests */,
+				DB3950B7299F5E680000E12D /* ModulotechUITests */,
+				DB395095299F5E670000E12D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DB395095299F5E670000E12D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB395094299F5E670000E12D /* Modulotech.app */,
+				DB3950AA299F5E680000E12D /* ModulotechTests.xctest */,
+				DB3950B4299F5E680000E12D /* ModulotechUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB395096299F5E670000E12D /* Modulotech */ = {
+			isa = PBXGroup;
+			children = (
+				DB395097299F5E670000E12D /* AppDelegate.swift */,
+				DB395099299F5E670000E12D /* SceneDelegate.swift */,
+				DB39509B299F5E670000E12D /* ViewController.swift */,
+				DB39509D299F5E670000E12D /* Main.storyboard */,
+				DB3950A0299F5E680000E12D /* Assets.xcassets */,
+				DB3950A2299F5E680000E12D /* LaunchScreen.storyboard */,
+				DB3950A5299F5E680000E12D /* Info.plist */,
+			);
+			path = Modulotech;
+			sourceTree = "<group>";
+		};
+		DB3950AD299F5E680000E12D /* ModulotechTests */ = {
+			isa = PBXGroup;
+			children = (
+				DB3950AE299F5E680000E12D /* ModulotechTests.swift */,
+			);
+			path = ModulotechTests;
+			sourceTree = "<group>";
+		};
+		DB3950B7299F5E680000E12D /* ModulotechUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DB3950B8299F5E680000E12D /* ModulotechUITests.swift */,
+				DB3950BA299F5E680000E12D /* ModulotechUITestsLaunchTests.swift */,
+			);
+			path = ModulotechUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DB395093299F5E670000E12D /* Modulotech */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB3950BE299F5E680000E12D /* Build configuration list for PBXNativeTarget "Modulotech" */;
+			buildPhases = (
+				DB395090299F5E670000E12D /* Sources */,
+				DB395091299F5E670000E12D /* Frameworks */,
+				DB395092299F5E670000E12D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Modulotech;
+			productName = Modulotech;
+			productReference = DB395094299F5E670000E12D /* Modulotech.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DB3950A9299F5E680000E12D /* ModulotechTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB3950C1299F5E680000E12D /* Build configuration list for PBXNativeTarget "ModulotechTests" */;
+			buildPhases = (
+				DB3950A6299F5E680000E12D /* Sources */,
+				DB3950A7299F5E680000E12D /* Frameworks */,
+				DB3950A8299F5E680000E12D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB3950AC299F5E680000E12D /* PBXTargetDependency */,
+			);
+			name = ModulotechTests;
+			productName = ModulotechTests;
+			productReference = DB3950AA299F5E680000E12D /* ModulotechTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DB3950B3299F5E680000E12D /* ModulotechUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB3950C4299F5E680000E12D /* Build configuration list for PBXNativeTarget "ModulotechUITests" */;
+			buildPhases = (
+				DB3950B0299F5E680000E12D /* Sources */,
+				DB3950B1299F5E680000E12D /* Frameworks */,
+				DB3950B2299F5E680000E12D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB3950B6299F5E680000E12D /* PBXTargetDependency */,
+			);
+			name = ModulotechUITests;
+			productName = ModulotechUITests;
+			productReference = DB3950B4299F5E680000E12D /* ModulotechUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB39508C299F5E670000E12D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					DB395093299F5E670000E12D = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					DB3950A9299F5E680000E12D = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = DB395093299F5E670000E12D;
+					};
+					DB3950B3299F5E680000E12D = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = DB395093299F5E670000E12D;
+					};
+				};
+			};
+			buildConfigurationList = DB39508F299F5E670000E12D /* Build configuration list for PBXProject "Modulotech" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DB39508B299F5E670000E12D;
+			productRefGroup = DB395095299F5E670000E12D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DB395093299F5E670000E12D /* Modulotech */,
+				DB3950A9299F5E680000E12D /* ModulotechTests */,
+				DB3950B3299F5E680000E12D /* ModulotechUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DB395092299F5E670000E12D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB3950A4299F5E680000E12D /* LaunchScreen.storyboard in Resources */,
+				DB3950A1299F5E680000E12D /* Assets.xcassets in Resources */,
+				DB39509F299F5E670000E12D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB3950A8299F5E680000E12D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB3950B2299F5E680000E12D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DB395090299F5E670000E12D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB39509C299F5E670000E12D /* ViewController.swift in Sources */,
+				DB395098299F5E670000E12D /* AppDelegate.swift in Sources */,
+				DB39509A299F5E670000E12D /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB3950A6299F5E680000E12D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB3950AF299F5E680000E12D /* ModulotechTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB3950B0299F5E680000E12D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB3950BB299F5E680000E12D /* ModulotechUITestsLaunchTests.swift in Sources */,
+				DB3950B9299F5E680000E12D /* ModulotechUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DB3950AC299F5E680000E12D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB395093299F5E670000E12D /* Modulotech */;
+			targetProxy = DB3950AB299F5E680000E12D /* PBXContainerItemProxy */;
+		};
+		DB3950B6299F5E680000E12D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB395093299F5E670000E12D /* Modulotech */;
+			targetProxy = DB3950B5299F5E680000E12D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DB39509D299F5E670000E12D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB39509E299F5E670000E12D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DB3950A2299F5E680000E12D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB3950A3299F5E680000E12D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DB3950BC299F5E680000E12D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DB3950BD299F5E680000E12D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DB3950BF299F5E680000E12D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6R633JDH9W;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Modulotech/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.sophieromanet.Modulotech;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DB3950C0299F5E680000E12D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6R633JDH9W;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Modulotech/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.sophieromanet.Modulotech;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DB3950C2299F5E680000E12D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6R633JDH9W;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.sophieromanet.ModulotechTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Modulotech.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Modulotech";
+			};
+			name = Debug;
+		};
+		DB3950C3299F5E680000E12D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6R633JDH9W;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.sophieromanet.ModulotechTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Modulotech.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Modulotech";
+			};
+			name = Release;
+		};
+		DB3950C5299F5E680000E12D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6R633JDH9W;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.sophieromanet.ModulotechUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Modulotech;
+			};
+			name = Debug;
+		};
+		DB3950C6299F5E680000E12D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6R633JDH9W;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.sophieromanet.ModulotechUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Modulotech;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DB39508F299F5E670000E12D /* Build configuration list for PBXProject "Modulotech" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB3950BC299F5E680000E12D /* Debug */,
+				DB3950BD299F5E680000E12D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB3950BE299F5E680000E12D /* Build configuration list for PBXNativeTarget "Modulotech" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB3950BF299F5E680000E12D /* Debug */,
+				DB3950C0299F5E680000E12D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB3950C1299F5E680000E12D /* Build configuration list for PBXNativeTarget "ModulotechTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB3950C2299F5E680000E12D /* Debug */,
+				DB3950C3299F5E680000E12D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB3950C4299F5E680000E12D /* Build configuration list for PBXNativeTarget "ModulotechUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB3950C5299F5E680000E12D /* Debug */,
+				DB3950C6299F5E680000E12D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DB39508C299F5E670000E12D /* Project object */;
+}
