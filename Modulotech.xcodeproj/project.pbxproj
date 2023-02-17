@@ -16,6 +16,13 @@
 		DB3950AF299F5E680000E12D /* ModulotechTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3950AE299F5E680000E12D /* ModulotechTests.swift */; };
 		DB3950B9299F5E680000E12D /* ModulotechUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3950B8299F5E680000E12D /* ModulotechUITests.swift */; };
 		DB3950BB299F5E680000E12D /* ModulotechUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3950BA299F5E680000E12D /* ModulotechUITestsLaunchTests.swift */; };
+		DB3950C8299F61B90000E12D /* CrontrolPageLightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3950C7299F61B90000E12D /* CrontrolPageLightViewController.swift */; };
+		DB3950CB299F62430000E12D /* ControlPageRollerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3950CA299F62430000E12D /* ControlPageRollerViewController.swift */; };
+		DB3950CD299F62670000E12D /* ControlPageHeatersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3950CC299F62670000E12D /* ControlPageHeatersViewController.swift */; };
+		DB3950CF299F62830000E12D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3950CE299F62830000E12D /* HomeViewController.swift */; };
+		DB3950D1299F62AB0000E12D /* HomeNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3950D0299F62AB0000E12D /* HomeNavigationViewController.swift */; };
+		DB3950D3299F68BF0000E12D /* Loc.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3950D2299F68BF0000E12D /* Loc.swift */; };
+		DB3950D6299F6B700000E12D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB3950D8299F6B700000E12D /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,14 @@
 		DB3950B4299F5E680000E12D /* ModulotechUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModulotechUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB3950B8299F5E680000E12D /* ModulotechUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulotechUITests.swift; sourceTree = "<group>"; };
 		DB3950BA299F5E680000E12D /* ModulotechUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulotechUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DB3950C7299F61B90000E12D /* CrontrolPageLightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrontrolPageLightViewController.swift; sourceTree = "<group>"; };
+		DB3950CA299F62430000E12D /* ControlPageRollerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPageRollerViewController.swift; sourceTree = "<group>"; };
+		DB3950CC299F62670000E12D /* ControlPageHeatersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPageHeatersViewController.swift; sourceTree = "<group>"; };
+		DB3950CE299F62830000E12D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DB3950D0299F62AB0000E12D /* HomeNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationViewController.swift; sourceTree = "<group>"; };
+		DB3950D2299F68BF0000E12D /* Loc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loc.swift; sourceTree = "<group>"; };
+		DB3950D7299F6B700000E12D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DB3950D9299F6BAD0000E12D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +114,7 @@
 		DB395096299F5E670000E12D /* Modulotech */ = {
 			isa = PBXGroup;
 			children = (
+				DB3950C9299F61C70000E12D /* ViewControllers */,
 				DB395097299F5E670000E12D /* AppDelegate.swift */,
 				DB395099299F5E670000E12D /* SceneDelegate.swift */,
 				DB39509B299F5E670000E12D /* ViewController.swift */,
@@ -106,6 +122,8 @@
 				DB3950A0299F5E680000E12D /* Assets.xcassets */,
 				DB3950A2299F5E680000E12D /* LaunchScreen.storyboard */,
 				DB3950A5299F5E680000E12D /* Info.plist */,
+				DB3950D2299F68BF0000E12D /* Loc.swift */,
+				DB3950D8299F6B700000E12D /* Localizable.strings */,
 			);
 			path = Modulotech;
 			sourceTree = "<group>";
@@ -125,6 +143,18 @@
 				DB3950BA299F5E680000E12D /* ModulotechUITestsLaunchTests.swift */,
 			);
 			path = ModulotechUITests;
+			sourceTree = "<group>";
+		};
+		DB3950C9299F61C70000E12D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DB3950C7299F61B90000E12D /* CrontrolPageLightViewController.swift */,
+				DB3950CA299F62430000E12D /* ControlPageRollerViewController.swift */,
+				DB3950CC299F62670000E12D /* ControlPageHeatersViewController.swift */,
+				DB3950CE299F62830000E12D /* HomeViewController.swift */,
+				DB3950D0299F62AB0000E12D /* HomeNavigationViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +243,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = DB39508B299F5E670000E12D;
 			productRefGroup = DB395095299F5E670000E12D /* Products */;
@@ -232,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB3950A4299F5E680000E12D /* LaunchScreen.storyboard in Resources */,
+				DB3950D6299F6B700000E12D /* Localizable.strings in Resources */,
 				DB3950A1299F5E680000E12D /* Assets.xcassets in Resources */,
 				DB39509F299F5E670000E12D /* Main.storyboard in Resources */,
 			);
@@ -259,8 +291,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB39509C299F5E670000E12D /* ViewController.swift in Sources */,
+				DB3950D1299F62AB0000E12D /* HomeNavigationViewController.swift in Sources */,
+				DB3950D3299F68BF0000E12D /* Loc.swift in Sources */,
 				DB395098299F5E670000E12D /* AppDelegate.swift in Sources */,
+				DB3950CD299F62670000E12D /* ControlPageHeatersViewController.swift in Sources */,
 				DB39509A299F5E670000E12D /* SceneDelegate.swift in Sources */,
+				DB3950C8299F61B90000E12D /* CrontrolPageLightViewController.swift in Sources */,
+				DB3950CF299F62830000E12D /* HomeViewController.swift in Sources */,
+				DB3950CB299F62430000E12D /* ControlPageRollerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +351,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		DB3950D8299F6B700000E12D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB3950D7299F6B700000E12D /* en */,
+				DB3950D9299F6BAD0000E12D /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -320,6 +367,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -380,6 +428,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
