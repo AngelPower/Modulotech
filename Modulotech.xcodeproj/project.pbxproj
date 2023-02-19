@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB2D548F29A208130051A317 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2D548E29A208130051A317 /* File.swift */; };
+		DB2D549329A20B8C0051A317 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2D549229A20B8C0051A317 /* Assets.swift */; };
+		DB2D549529A20C900051A317 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = DB2D549429A20C900051A317 /* Data.json */; };
+		DB32A27B29A0BBE500D075E3 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB32A27A29A0BBE500D075E3 /* HomeViewCell.swift */; };
+		DB32A27E29A0CC7700D075E3 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB32A27D29A0CC7700D075E3 /* Device.swift */; };
 		DB395098299F5E670000E12D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB395097299F5E670000E12D /* AppDelegate.swift */; };
 		DB39509A299F5E670000E12D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB395099299F5E670000E12D /* SceneDelegate.swift */; };
 		DB39509C299F5E670000E12D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB39509B299F5E670000E12D /* ViewController.swift */; };
@@ -43,6 +48,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB2D548E29A208130051A317 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		DB2D549229A20B8C0051A317 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		DB2D549429A20C900051A317 /* Data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
+		DB32A27A29A0BBE500D075E3 /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
+		DB32A27D29A0CC7700D075E3 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		DB395094299F5E670000E12D /* Modulotech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Modulotech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB395097299F5E670000E12D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB395099299F5E670000E12D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +101,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB32A27C29A0CC5000D075E3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DB32A27D29A0CC7700D075E3 /* Device.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		DB39508B299F5E670000E12D = {
 			isa = PBXGroup;
 			children = (
@@ -114,16 +132,19 @@
 		DB395096299F5E670000E12D /* Modulotech */ = {
 			isa = PBXGroup;
 			children = (
+				DB32A27C29A0CC5000D075E3 /* Model */,
 				DB3950C9299F61C70000E12D /* ViewControllers */,
 				DB395097299F5E670000E12D /* AppDelegate.swift */,
 				DB395099299F5E670000E12D /* SceneDelegate.swift */,
 				DB39509B299F5E670000E12D /* ViewController.swift */,
+				DB2D549229A20B8C0051A317 /* Assets.swift */,
 				DB39509D299F5E670000E12D /* Main.storyboard */,
 				DB3950A0299F5E680000E12D /* Assets.xcassets */,
 				DB3950A2299F5E680000E12D /* LaunchScreen.storyboard */,
 				DB3950A5299F5E680000E12D /* Info.plist */,
 				DB3950D2299F68BF0000E12D /* Loc.swift */,
 				DB3950D8299F6B700000E12D /* Localizable.strings */,
+				DB2D549429A20C900051A317 /* Data.json */,
 			);
 			path = Modulotech;
 			sourceTree = "<group>";
@@ -151,8 +172,10 @@
 				DB3950C7299F61B90000E12D /* CrontrolPageLightViewController.swift */,
 				DB3950CA299F62430000E12D /* ControlPageRollerViewController.swift */,
 				DB3950CC299F62670000E12D /* ControlPageHeatersViewController.swift */,
+				DB2D548E29A208130051A317 /* File.swift */,
 				DB3950CE299F62830000E12D /* HomeViewController.swift */,
 				DB3950D0299F62AB0000E12D /* HomeNavigationViewController.swift */,
+				DB32A27A29A0BBE500D075E3 /* HomeViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -262,6 +285,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB2D549529A20C900051A317 /* Data.json in Resources */,
 				DB3950A4299F5E680000E12D /* LaunchScreen.storyboard in Resources */,
 				DB3950D6299F6B700000E12D /* Localizable.strings in Resources */,
 				DB3950A1299F5E680000E12D /* Assets.xcassets in Resources */,
@@ -291,13 +315,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB39509C299F5E670000E12D /* ViewController.swift in Sources */,
+				DB2D548F29A208130051A317 /* File.swift in Sources */,
+				DB32A27E29A0CC7700D075E3 /* Device.swift in Sources */,
 				DB3950D1299F62AB0000E12D /* HomeNavigationViewController.swift in Sources */,
 				DB3950D3299F68BF0000E12D /* Loc.swift in Sources */,
 				DB395098299F5E670000E12D /* AppDelegate.swift in Sources */,
 				DB3950CD299F62670000E12D /* ControlPageHeatersViewController.swift in Sources */,
 				DB39509A299F5E670000E12D /* SceneDelegate.swift in Sources */,
 				DB3950C8299F61B90000E12D /* CrontrolPageLightViewController.swift in Sources */,
+				DB32A27B29A0BBE500D075E3 /* HomeViewCell.swift in Sources */,
 				DB3950CF299F62830000E12D /* HomeViewController.swift in Sources */,
+				DB2D549329A20B8C0051A317 /* Assets.swift in Sources */,
 				DB3950CB299F62430000E12D /* ControlPageRollerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

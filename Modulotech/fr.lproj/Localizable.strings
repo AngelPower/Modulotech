@@ -6,4 +6,14 @@
   
 */
 
-"control_page.light.title" = "Page de controle Light";
+"control_page.light.title" = "Page de controle Lumière";
+"control_page.light.label" = "Mode";
+"control_page.light.labelIntensity" = "Intensité";
+"control_page.light.buttonSave" = "Enregistrer";
+"control_page.roller.labelPosition" = "Position";
+"control_page.roller.title" = "Page de controle des vollets roulants";
+"control_page.heaters.label" = "Mode";
+"control_page.heaters.labelTemperature" = "Température";
+"control_page.heaters.buttonSave" = "Enregistrer";
+"control_page.heaters.title" = "Page de controle des radiateur";
+"control_page.Home.title" = "Page d'accueil";

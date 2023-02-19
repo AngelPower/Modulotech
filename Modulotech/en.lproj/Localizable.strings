@@ -7,3 +7,13 @@
 */
 
 "control_page.light.title" = "Control Page Light";
+"control_page.light.label" = "Mode";
+"control_page.light.labelIntensity" = "Intensity";
+"control_page.light.buttonSave" = "Save";
+"control_page.roller.labelPosition" = "Position";
+"control_page.roller.title" = "Control page Roller shutters";
+"control_page.heaters.label" = "Mode";
+"control_page.heaters.labelTemperature" = "Temperature";
+"control_page.heaters.buttonSave" = "Save";
+"control_page.heaters.title" = "Control Page Heaters";
+"control_page.Home.title" = "Home";
