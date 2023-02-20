@@ -14,6 +14,10 @@ class HomeViewCell: UITableViewCell {
     let myImageView: UIImageView = {
        let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.layer.cornerRadius = 25
+        imageView.layer.borderWidth = 2.0
+        imageView.clipsToBounds = true
+        imageView.contentMode = .scaleAspectFit
         return imageView
     }()
     
@@ -24,7 +28,7 @@ class HomeViewCell: UITableViewCell {
         return label
     }()
     
-    let myLabelRight: UILabel = {
+    var myLabelRight: UILabel = {
        let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: 10)
@@ -52,7 +56,6 @@ class HomeViewCell: UITableViewCell {
         hStackView.addArrangedSubview(myLabel)
         hStackView.addArrangedSubview(myLabelRight)
         configureAutoLayout()
-        
     }
     
        required init?(coder: NSCoder) {
@@ -65,25 +68,53 @@ class HomeViewCell: UITableViewCell {
             hStackView.topAnchor.constraint(equalTo: contentView.topAnchor),
             hStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
             hStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
-            hStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+            hStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            
+            myImageView.widthAnchor.constraint(equalToConstant: 60)
         ])
-        
-
-        
-    }
-        
-    func configureLabel(label: String) {
-        myLabel.text = label
     }
     
-    func configureLabelRight(label: String) {
-        myLabelRight.text = label
+    func configure(with device: DeviceItem) {
+        switch device {
+        case .light(let deviceLight):
+            configure(with: deviceLight)
+        case .heater(let deviceHeater):
+            configure(with: deviceHeater)
+        case .roller(let deviceRoller):
+            configure(with: deviceRoller)
+        }
     }
     
-    func configureImage(image: String) {
-        myImageView.image = UIImage(named: image)
+    private func configure(with device: DeviceLight) {
+        if device.intensity != 0 && device.mode == "ON" {
+            self.myLabelRight.text = "ON at "+"\(device.intensity)"+"%"
+            self.myImageView.image = UIImage(named: "DeviceLightOnIcon")
+        } else {
+            self.myLabelRight.text = "OFF"
+            self.myImageView.image = UIImage(named: "DeviceLightOffIcon")
+        }
+        self.myLabel.text = device.deviceName
     }
     
+    private func configure(with device: DeviceRoller) {
+        if device.position != 0 {
+            self.myLabelRight.text = Loc.HomeViewCell.DeviceRoller.Status.opened(String(device.position))
+        } else {
+            self.myLabelRight.text = Loc.HomeViewCell.DeviceRoller.Status.closed
+        }
+        self.myLabel.text = device.deviceName
+        self.myImageView.image = Assets.deviceLightOnIcon
+    }
+    
+    private func configure(with device: DeviceHeater) {
+        if device.mode != "OFF" {
+            self.myLabelRight.text =  "on at "+"\(device.temperature)"+"%"
+        } else {
+            self.myLabelRight.text = "OFF"
+        }
+        self.myLabel.text = device.deviceName
+        self.myImageView.image = UIImage(named: "DeviceHeaterOnIcon")
+    }
 }
 
 import SwiftUI

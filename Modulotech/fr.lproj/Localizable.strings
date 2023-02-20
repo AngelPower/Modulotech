@@ -17,3 +17,5 @@
 "control_page.heaters.buttonSave" = "Enregistrer";
 "control_page.heaters.title" = "Page de controle des radiateur";
 "control_page.Home.title" = "Page d'accueil";
+"home_view_cell.device_roller.status.closed" = "fermé";
+"home_view_cell.device_roller.status.opened" =  "ouvert à %@ %%";

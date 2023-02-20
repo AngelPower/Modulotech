@@ -17,3 +17,5 @@
 "control_page.heaters.buttonSave" = "Save";
 "control_page.heaters.title" = "Control Page Heaters";
 "control_page.Home.title" = "Home";
+"home_view_cell.device_roller.status.closed" = "closed";
+"home_view_cell.device_roller.status.opened" =  "opened at %@ %%";

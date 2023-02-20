@@ -29,15 +29,24 @@ enum Loc {
         }
     }
     
-    
+    enum HomeViewCell {
+        enum DeviceRoller {
+            enum Status {
+                static let closed = Loc.tr(key: "home_view_cell.device_roller.status.closed")
+                static func opened(_ arg1: String) -> String {
+                    Loc.tr(key: "home_view_cell.device_roller.status.opened", args: arg1)
+                }
+            }
+        }
+    }
+
 }
 
 extension Loc {
     
     static func tr (key: String, args: CVarArg...) -> String {
-        
-        NSLocalizedString(key, comment: "")
-        
+        let stringPlaceholder = NSLocalizedString(key, comment: "")
+        return String(format: stringPlaceholder, arguments: args)
     }
     
 }

@@ -9,6 +9,8 @@ import UIKit
 
 class ControlPageRollerViewController: UIViewController {
     
+    let data: DeviceRoller
+    
     lazy var myLabelPosition: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -62,9 +64,21 @@ class ControlPageRollerViewController: UIViewController {
         title = Loc.ControlPage.Roller.title
         slider.addTarget(self, action: #selector(self.changeValue(_:)), for: .valueChanged)
         buttonSave.addTarget(self, action:#selector(self.buttonClicked), for: .touchUpInside)
+        configureAttributes()
         createView()
         configureAutoLayout()
         
+    }
+    
+    
+    init(data: DeviceRoller) {
+
+        self.data = data
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     
@@ -88,6 +102,11 @@ class ControlPageRollerViewController: UIViewController {
         stackViewPosition.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
         stackViewPosition.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 136)
         ])
+    }
+    
+   private func configureAttributes() {
+       slider.value = Float(data.position)
+       paybackLabel.text = String(data.position)
     }
     
     @objc func changeValue(_ sender: UISlider) {
@@ -115,7 +134,7 @@ struct ControlPageRollerViewControllerPreviews: PreviewProvider {
 struct ControllePageRollerViewControllerRepresentable: UIViewControllerRepresentable {
     
     func makeUIViewController(context: Context) -> UINavigationController {
-        let vc = ControlPageRollerViewController()
+        let vc = ControlPageRollerViewController(data: .init(id: 1, deviceName: "Device Name Preview", position: 10))
         return UINavigationController.init(rootViewController: vc)
         
     }

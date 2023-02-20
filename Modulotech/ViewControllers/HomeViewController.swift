@@ -7,28 +7,28 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UITableViewDelegate {
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-
-    
-    private let tableView: UITableView = {
+    let tableView: UITableView = {
        let tableView = UITableView()
         tableView.register(HomeViewCell.self, forCellReuseIdentifier: HomeViewCell.identifier)
         return tableView
         
     }()
+    let fileName = "data.json"
     
+    lazy var viewModel = HomeViewModel(controller: self)
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         title = Loc.ControlPage.Home.title
-        //createDevices()
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.rowHeight = 80
+        tableView.rowHeight = 50
         tableView.estimatedRowHeight = UITableView.automaticDimension
         view.addSubview(tableView)
-     
+        viewModel.viewDidLoad()
     }
     
     override func viewDidLayoutSubviews() {
@@ -36,62 +36,35 @@ class HomeViewController: UIViewController, UITableViewDelegate {
         tableView.frame = view.bounds
     }
     
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+         viewModel.data.count
+    }
+    
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+         let data = viewModel.data[indexPath.row]
+         let cell = tableView.dequeueReusableCell(withIdentifier: HomeViewCell.identifier, for: indexPath) as! HomeViewCell
+         cell.configure(with: data)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       
+        let data = viewModel.data[indexPath.row]
+        let vc: UIViewController
+        
+        switch data {
+        case .roller(let roller):
+            vc = ControlPageRollerViewController(data: roller)
+        case .light(let light):
+            vc = ControlPageLightViewController()
+        case .heater(let heater):
+            vc = ControlPageHeatersViewController()
+            
+        }
+        
+        self.present(vc, animated: true)
+    }
 
-   
-
-}
-
-extension HomeViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
-    }
-    
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: HomeViewCell.identifier, for: indexPath) as? HomeViewCell {
-//            let currentDevice = self.devices[indexPath.row]
-//            cell.configureLabel(label: currentDevice.deviceName)
-//
-//            if (currentDevice.productType == "RollerShutter"){
-//                cell.configureLabelRight(label: configureRollerShutter(position: currentDevice.position))
-//                cell.configureImage(image: "DeviceRollerShutterIcon")
-//            } else if (currentDevice.productType == "Light") {
-//                cell.configureLabelRight(label: configureLight(intensity: currentDevice.intensity, mode: currentDevice.mode))
-//                cell.configureImage(image: "DeviceLightOnIcon")
-//            } else {
-//                cell.configureLabelRight(label: configureHeater(mode: currentDevice.mode, temperature: currentDevice.temperature))
-//                cell.configureImage(image: "DeviceHeaterOnIcon")
-//            }
-            return cell
-        }
-        fatalError("could not cell")
-    }
-    
-    func configureLight(intensity: Int, mode: String) -> String{
-        if intensity != 0 && mode == "ON" {
-            return "ON at "+"\(intensity)"+"%"
-        } else {
-            return "OFF"
-        }
-    }
-    
-    func configureRollerShutter(position: Int) -> String{
-        if position != 0 {
-            return "opened at "+"\(position)"+"%"
-        } else {
-            return "closed"
-        }
-    }
-    
-    func configureHeater(mode: String, temperature: Int) -> String{
-        if mode != "OFF" {
-            return "on at "+"\(temperature)"+"%"
-        } else {
-            return "OFF"
-        }
-    }
-    
-    
 }
 
 
