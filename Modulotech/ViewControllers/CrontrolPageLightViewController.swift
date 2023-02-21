@@ -9,6 +9,8 @@ import UIKit
 
 class ControlPageLightViewController: UIViewController {
     
+    let data: DeviceLight
+    
     lazy var myLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -44,7 +46,6 @@ class ControlPageLightViewController: UIViewController {
     
     lazy var switchMode: UISwitch = {
         let switchDemo = UISwitch()
-        switchDemo.setOn(true, animated: false)
         return switchDemo
     }()
     
@@ -77,22 +78,32 @@ class ControlPageLightViewController: UIViewController {
     }()
     
     override func loadView() {
+        
         super.loadView()
         createView()
+        configureAttributes()
         configureAutoLayout()
         configureConnections()
     }
     
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         title = Loc.ControlPage.Light.title
         view.backgroundColor = .white
     }
     
-    // configureOutlet | configure Connections
+    init(data: DeviceLight) {
+
+        self.data = data
+        super.init(nibName: nil, bundle: nil)
+    }
     
-    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     @objc func switchStateDidChange(_ sender: UISwitch) {
         if sender.isOn == true {
             print("UISwitch state is now ON")
@@ -100,8 +111,7 @@ class ControlPageLightViewController: UIViewController {
             print("UISwitch state is now Off")
         }
     }
-    
-    // createView
+
     func createView() {
         
         view.addSubview(stackView)
@@ -116,6 +126,7 @@ class ControlPageLightViewController: UIViewController {
     
     // configureAutoLayout
     func configureAutoLayout() {
+        
         let padding: CGFloat = 20
         NSLayoutConstraint.activate([
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
@@ -129,7 +140,20 @@ class ControlPageLightViewController: UIViewController {
   
     }
     
+    func configureAttributes() {
+        
+        if data.mode == "ON" {
+            switchMode.isOn = true
+        }else {
+            switchMode.isOn = false
+        }
+        
+        paybackLabel.text = String(data.intensity)
+        slider.value = Float(data.intensity)
+    }
+    
     private func configureConnections() {
+        
         switchMode.addTarget(self, action: #selector(self.switchStateDidChange(_:)), for: .valueChanged)
         slider.addTarget(self, action: #selector(self.changeValue(_:)), for: .valueChanged)
         buttonSave.addTarget(self, action:#selector(self.buttonClicked), for: .touchUpInside)
@@ -137,43 +161,14 @@ class ControlPageLightViewController: UIViewController {
     
     
     @objc func changeValue(_ sender: UISlider) {
+        
         debugPrint("value is" , Int(sender.value))
         paybackLabel.text = "\(sender.value)"
     }
     
     @objc func buttonClicked() {
+        
         print("Button Clicked")
     }
-    
-}
-
-import SwiftUI
-
-struct ControlPageLightViewControllerPreviews: PreviewProvider {
-    
-    static var previews: some View
-    {
-      ControllePageLightViewControllerRepresentable()
-     
-    }
-}
-
-struct ControllePageLightViewControllerRepresentable: UIViewControllerRepresentable {
-    
-    func makeUIViewController(context: Context) -> UINavigationController {
-        let vc = ControlPageLightViewController()
-        return UINavigationController.init(rootViewController: vc)
-        
-    }
-    
-    func updateUIViewController(_ uiViewController: UINavigationController, context: Context) {
-    
-    }
-    
-    
-    typealias UIViewControllerType = UINavigationController
-    
-    
-    
     
 }

@@ -8,6 +8,9 @@
 import UIKit
 
 enum Assets {
-    static var deviceLightOnIcon: UIImage = .init(named: "DeviceRollerShutterIcon")!
-    static var image1: UIImage = .init(named: "image1")!
+    static var DeviceRollerShutterIcon: UIImage = .init(named: "DeviceRollerShutterIcon")!
+    static var DeviceLightOnIcon: UIImage = .init(named: "DeviceLightOnIcon")!
+    static var DeviceLightOffIcon: UIImage = .init(named: "DeviceLightOffIcon")!
+    static var DeviceHeaterOnIcon: UIImage = .init(named: "DeviceHeaterOnIcon")!
+    static var DeviceHeaterOffIcon: UIImage = .init(named: "DeviceHeaterOffIcon")!
 }

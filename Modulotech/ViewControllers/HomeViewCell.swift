@@ -10,9 +10,9 @@ import UIKit
 class HomeViewCell: UITableViewCell {
     
     static var identifier = "\(HomeViewCell.self)"
-   
+    
     let myImageView: UIImageView = {
-       let imageView = UIImageView()
+        let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.layer.cornerRadius = 25
         imageView.layer.borderWidth = 2.0
@@ -22,14 +22,14 @@ class HomeViewCell: UITableViewCell {
     }()
     
     let myLabel: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: 17, weight: .bold)
         return label
     }()
     
     var myLabelRight: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: 10)
         label.setContentCompressionResistancePriority(.required, for: .horizontal)
@@ -38,29 +38,31 @@ class HomeViewCell: UITableViewCell {
     }()
     
     private let hStackView: UIStackView = {
-       let stackView = UIStackView()
+        let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .horizontal
         stackView.spacing = 8
         return stackView
     }()
-   
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(hStackView)
         NSLayoutConstraint.activate([
             imageView!.heightAnchor.constraint(equalToConstant: 50),
             imageView!.widthAnchor.constraint(equalToConstant: 50)
-            ])
+        ])
         hStackView.addArrangedSubview(myImageView)
         hStackView.addArrangedSubview(myLabel)
         hStackView.addArrangedSubview(myLabelRight)
         configureAutoLayout()
     }
     
-       required init?(coder: NSCoder) {
-           fatalError("init(coder:) has not been implemented")
-       }
+    required init?(coder: NSCoder) {
+        
+        fatalError("init(coder:) has not been implemented")
+    }
     
     private func configureAutoLayout() {
         
@@ -75,6 +77,7 @@ class HomeViewCell: UITableViewCell {
     }
     
     func configure(with device: DeviceItem) {
+        
         switch device {
         case .light(let deviceLight):
             configure(with: deviceLight)
@@ -86,59 +89,38 @@ class HomeViewCell: UITableViewCell {
     }
     
     private func configure(with device: DeviceLight) {
+        
         if device.intensity != 0 && device.mode == "ON" {
-            self.myLabelRight.text = "ON at "+"\(device.intensity)"+"%"
-            self.myImageView.image = UIImage(named: "DeviceLightOnIcon")
+            self.myLabelRight.text = Loc.HomeViewCell.DeviceLight.Status.intensity(String(device.intensity))
+            self.myImageView.image = Assets.DeviceLightOnIcon
         } else {
-            self.myLabelRight.text = "OFF"
-            self.myImageView.image = UIImage(named: "DeviceLightOffIcon")
+            self.myLabelRight.text = Loc.HomeViewCell.DeviceLight.Status.off
+            self.myImageView.image = Assets.DeviceLightOffIcon
         }
         self.myLabel.text = device.deviceName
     }
     
     private func configure(with device: DeviceRoller) {
+        
         if device.position != 0 {
             self.myLabelRight.text = Loc.HomeViewCell.DeviceRoller.Status.opened(String(device.position))
         } else {
             self.myLabelRight.text = Loc.HomeViewCell.DeviceRoller.Status.closed
         }
         self.myLabel.text = device.deviceName
-        self.myImageView.image = Assets.deviceLightOnIcon
+        self.myImageView.image = Assets.DeviceRollerShutterIcon
     }
     
     private func configure(with device: DeviceHeater) {
+        
         if device.mode != "OFF" {
-            self.myLabelRight.text =  "on at "+"\(device.temperature)"+"%"
+            self.myLabelRight.text =  Loc.HomeViewCell.DeviceHeater.Status.temperature(String(device.temperature))
+            self.myImageView.image = Assets.DeviceHeaterOnIcon
+            
         } else {
-            self.myLabelRight.text = "OFF"
+            self.myLabelRight.text = Loc.HomeViewCell.DeviceHeater.Status.off
+            self.myImageView.image = Assets.DeviceHeaterOffIcon
         }
         self.myLabel.text = device.deviceName
-        self.myImageView.image = UIImage(named: "DeviceHeaterOnIcon")
     }
-}
-
-import SwiftUI
-
-struct HomeViewCellPreviews: PreviewProvider {
-    static var previews: some View {
-        HomeViewCellRepresentable()
-            .previewLayout(.fixed(width: 320, height: 70))
-    }
-    
-}
-
-
-struct HomeViewCellRepresentable: UIViewRepresentable {
-    func makeUIView(context: Context) -> HomeViewCell {
-        HomeViewCell(style: .default, reuseIdentifier: nil)
-    }
-    
-    func updateUIView(_ uiView: HomeViewCell, context: Context) {
-        
-    }
-    
-    typealias UIViewType = HomeViewCell
-    
-    
-    
 }

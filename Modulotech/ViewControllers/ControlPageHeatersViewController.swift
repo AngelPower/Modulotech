@@ -9,6 +9,8 @@ import UIKit
 
 class ControlPageHeatersViewController: UIViewController {
     
+    let data: DeviceHeater
+    
     lazy var myLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -80,15 +82,28 @@ class ControlPageHeatersViewController: UIViewController {
     }()
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         view.backgroundColor = .white
         title = Loc.ControlPage.Heaters.title
         switchMode.addTarget(self, action: #selector(self.switchStateDidChange(_:)), for: .valueChanged)
         slider.addTarget(self, action: #selector(self.changeValue(_:)), for: .valueChanged)
         buttonSave.addTarget(self, action:#selector(self.buttonClicked), for: .touchUpInside)
+        configureAttributes()
         createView()
         configureAutoLayout()
         
+    }
+    
+    init(data: DeviceHeater) {
+
+        self.data = data
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        
+        fatalError("init(coder:) has not been implemented")
     }
     
     
@@ -103,6 +118,7 @@ class ControlPageHeatersViewController: UIViewController {
     }
     
     override func didReceiveMemoryWarning() {
+        
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
@@ -120,6 +136,7 @@ class ControlPageHeatersViewController: UIViewController {
     }
     
     func configureAutoLayout() {
+        
         NSLayoutConstraint.activate([
         stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
         stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
@@ -131,7 +148,19 @@ class ControlPageHeatersViewController: UIViewController {
         ])
     }
     
+    func configureAttributes() {
+        
+        if data.mode == "ON" {
+            switchMode.isOn = true
+        }else {
+            switchMode.isOn = false
+        }
+        paybackLabel.text = String(data.temperature)
+        slider.value = Float(data.temperature)
+    }
+    
     @objc func changeValue(_ sender: UISlider) {
+        
         print("value is" , Int(sender.value));
         let step: Float = 0.5
         let roundedValue = round(sender.value / step) * step
@@ -140,39 +169,8 @@ class ControlPageHeatersViewController: UIViewController {
     }
     
     @objc func buttonClicked() {
+        
         print("Button Clicked")
     }
     
 }
-
-import SwiftUI
-
-struct ControlPageHeatersViewControllerPreviews: PreviewProvider {
-    
-    static var previews: some View
-    {
-        ControllePageHeatersViewControllerRepresentable()
-     
-    }
-}
-
-struct ControllePageHeatersViewControllerRepresentable: UIViewControllerRepresentable {
-    
-    func makeUIViewController(context: Context) -> UINavigationController {
-        let vc = ControlPageHeatersViewController()
-        return UINavigationController.init(rootViewController: vc)
-        
-    }
-    
-    func updateUIViewController(_ uiViewController: UINavigationController, context: Context) {
-    
-    }
-    
-    
-    typealias UIViewControllerType = UINavigationController
-    
-    
-    
-    
-}
-

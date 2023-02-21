@@ -38,8 +38,24 @@ enum Loc {
                 }
             }
         }
+        enum DeviceLight {
+            enum Status {
+                static func intensity(_ arg1: String) -> String {
+                    Loc.tr(key: "home_view_cell.device_light.status.on", args: arg1)
+                }
+                static let off = Loc.tr(key: "home_view_cell.device_light.status.off")
+            }
+        }
+        enum DeviceHeater {
+            enum Status {
+                static func temperature(_ arg1: String) -> String {
+                    Loc.tr(key: "home_view_cell.device_heater.status.temperature", args: arg1)
+                }
+                static let off = Loc.tr(key: "home_view_cell.device_Heater.status.off")
+               
+            }
+        }
     }
-
 }
 
 extension Loc {

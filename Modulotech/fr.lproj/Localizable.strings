@@ -19,3 +19,7 @@
 "control_page.Home.title" = "Page d'accueil";
 "home_view_cell.device_roller.status.closed" = "fermé";
 "home_view_cell.device_roller.status.opened" =  "ouvert à %@ %%";
+"home_view_cell.device_light.status.on" = "allumé à %@ %%";
+"home_view_cell.device_heater.status.temperature" = "temparature à %@ %%";
+"home_view_cell.device_Heater.status.off" = "éteint";
+"home_view_cell.device_light.status.off" = "éteint";
